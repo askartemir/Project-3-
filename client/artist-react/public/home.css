@@ -1,0 +1,21 @@
+body{
+    margin: 10, 10
+}
+
+.userType {
+    padding: 20px;
+}
+
+nav{
+    padding: 10px;
+}
+
+.card-image{
+    height: 200px;
+    width: 50%;
+}
+
+.card-content{
+    height: 200px;
+}
+
