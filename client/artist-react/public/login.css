@@ -1,3 +1,28 @@
-.button {
-	
-}	
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+.card-title {
+	text-align: center;
+}
+
+/* unset bs3 setting */
+.modal-open {
+ overflow: auto; 
+}
+
+.member-btn {
+	margin: 0 -30px 0 -99px;
+    position:relative;
+    left: 49%; 
+    margin-top: 12px;
+}
+
+.collapsible {
+	width: 20px;
+}
