@@ -24,23 +24,20 @@
 	        </div>
 
 			<div class="card-action center-align">
-		        <a class="waves-effect waves-light btn"><i class="material-icons left">palette</i>artist</a>
-				<a class="waves-effect waves-light btn"><i class="material-icons right">business</i>venue</a>
+		        <button data-target="modal1" class="waves-effect waves-light btn modal-trigger artist-btn"><i class="material-icons left">palette</i>artist</a>
+				<button data-target="modal1" class="waves-effect waves-light btn modal-trigger artist-btn"><i class="material-icons right">business</i>venue</a>
 	 		</div>
 	 	  </div>
 	 	</div>
 	</div>
 </div>
 
-  <!-- Modal Trigger -->
-   <button data-target="modal1" class="btn modal-trigger">Modal</button>
-
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
 
           <div class="card-content">
-            <span class="card-title">Login Here</span>
+            <span class="card-title"><h3>Sign Up</h3></span>
             <div class="row">
               <div class="input-field col s12">
                 <label for="email">Email address</label>
@@ -56,12 +53,25 @@
             </div>
           </div>
     </div>
-    
+
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+      	<a class="waves-effect waves-light btn">Go</a>
     </div>
   </div>
+
+  <div class="member-btn">
+  	<a class="waves-effect waves-light btn">Already vibe with us?</a>
+  </div>
  
+
+<ul class="collapsible container">
+    <li>
+      <div class="collapsible-header">ABOUT US</div>
+      <div class="collapsible-body"><span><h5>Hi!</h5></span>
+		<p>We're this place that connects artists to venues to showcase their art, and connects the venues to the artists.</p>
+      </div>
+    </li>
 
 	<script type="text/javascript">
 (function ($) {
@@ -75,6 +85,10 @@
 
     }); // end of document ready
 })(jQuery); // end of jQuery name space
+
+ $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
   </script>
 
 </body>
