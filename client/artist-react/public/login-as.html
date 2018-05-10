@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Art Connector</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </head>
 <body>
+
+<div class="container">
+	<div class="center-align col s12 m7">
+	  <h3 class="header">Welcome</h3>
+	    <div class="card horizontal">
+	      <div class="card-image">
+	      </div>
+		
+	      <div class="card-stacked">
+	        <div class="card-content">
+	          <p>Are you an artist, or a venue looking for an artist?</p>
+	        </div>
+
+			<div class="card-action center-align">
+		        <a class="waves-effect waves-light btn"><i class="material-icons left">palette</i>artist</a>
+				<a class="waves-effect waves-light btn"><i class="material-icons right">business</i>venue</a>
+	 		</div>
+	 	  </div>
+	 	</div>
+	</div>
+</div>
+
+  <!-- Modal Trigger -->
+   <button data-target="modal1" class="btn modal-trigger">Modal</button>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+
+          <div class="card-content">
+            <span class="card-title">Login Here</span>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="email">Email address</label>
+                <input type="email" name="email" id="email" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="password">Password </label>
+                <input type="password" name="password" id="password" />
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+ 
+
+	<script type="text/javascript">
+(function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
+  </script>
 
 </body>
 </html>

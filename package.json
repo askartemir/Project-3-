@@ -20,6 +20,8 @@
   "homepage": "https://github.com/askartemir/Project-3-#readme",
   "dependencies": {
     "aws-sdk": "^2.234.1",
+    "bcrypt": "^2.0.1",
+    "config.json": "0.0.4",
     "express": "^4.16.3",
     "mysql": "^2.15.0"
   }
