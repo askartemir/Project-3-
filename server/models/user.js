@@ -10,6 +10,13 @@ var Artist = sequelize.define("artist", {
   timestamps: true
 });
 
+var Artwork = sequelize.define("artwork", {
+    piece_Id: Sequelize.INTEGER,
+    img_url: Sequelize.STRING
+}, {
+    timestamps: true
+});
+
 Artist.sync();
 
 var Venue = sequelize.define("venue", {
@@ -17,7 +24,7 @@ var Venue = sequelize.define("venue", {
     name: Sequelize.STRING,
     email: Sequelize.STRING,
     favorites: Sequelize.STRING
-},{
+}, {
     timestamps: true
 });
 
