@@ -23,6 +23,16 @@ body {
     margin-top: 12px;
 }
 
+ul.collapsible.container {
+	margin-top: 185px;
+	margin-left: 10px;
+}
+
 .collapsible {
-	width: 20px;
+	width: 300px;
+	text-align: center;
+}
+
+.collapsible-header {
+	padding-left: 97px;
 }
