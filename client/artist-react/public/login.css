@@ -1,10 +1,8 @@
-html {
-  overflow: hidden;
-  height: 100%;
-}
 body {
-  overflow: auto;
-  height: 100%;
+  overflow-x: hidden !important;
+}
+body > * {
+  max-width: 100% !important;
 }
 
 .card-title {
@@ -24,7 +22,7 @@ body {
 }
 
 ul.collapsible.container {
-	margin-top: 185px;
+	margin-top: 170px;
 	margin-left: 10px;
 }
 
@@ -35,4 +33,12 @@ ul.collapsible.container {
 
 .collapsible-header {
 	padding-left: 97px;
+}
+
+a.waves-effect.waves-light.btn {
+	margin-top: 10px;
+}
+
+button.waves-effect.waves-light.btn.modal-trigger.artist-btn.second {
+	margin-left: 25px;
 }
