@@ -10,6 +10,8 @@ var Artist = sequelize.define("artist", {
   timestamps: true
 });
 
+Artist.sync();
+
 var Artwork = sequelize.define("artwork", {
     piece_Id: Sequelize.INTEGER,
     img_url: Sequelize.STRING
@@ -17,7 +19,7 @@ var Artwork = sequelize.define("artwork", {
     timestamps: true
 });
 
-Artist.sync();
+Artwork.sync();
 
 var Venue = sequelize.define("venue", {
     routeName: Sequelize.STRING,
@@ -29,4 +31,5 @@ var Venue = sequelize.define("venue", {
 });
 
 module.exports = Artist;
+module.exports = Artwork;
 module.exports = Venue;

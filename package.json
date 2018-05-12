@@ -23,6 +23,11 @@
     "bcrypt": "^2.0.1",
     "config.json": "0.0.4",
     "express": "^4.16.3",
-    "mysql": "^2.15.0"
+    "express-generator": "^4.16.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.7",
+    "sequelize-cli": "^4.0.0"
   }
 }
