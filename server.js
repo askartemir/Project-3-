@@ -19,12 +19,12 @@ var PORT = process.env.PORT || 8080;
 
 //require our models for synching
 
-// var db = require("./models");
+var db = require("./models");
 
 //sets up bucket name and key
 var bucketName = "project3artbucket";
 var bucketKey = "AKIAIG5RSPGSHGU6Y3SA";
-var secretKey = "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";
+var secretKey = "9GMtEtqgH+ifUw2jmDiVU7/WSQobdcioAYMsAykYt";
 
 AWS.config.update(
 {
@@ -54,11 +54,11 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-// db.sequelize.sync({force:true}).then(function(){
+db.sequelize.sync({force:true}).then(function(){
  	app.listen(PORT, function(){
 		console.log("App is listening on PORT: " + PORT);
  	});
-// });
+});
 
 s3.createBucket({Bucket: bucketName}, function(err, data)
 {
@@ -84,6 +84,7 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
             }
         });
     }
+});
 
 
 //here are the Routes
