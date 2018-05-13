@@ -1,5 +1,7 @@
 import React from "react";
 import Modal from "../components/modal/modal";
+import "./login.css"
+import { Button, Card, Col } from 'react-materialize';
 
 export default class Login extends React.Component {
 	render () {

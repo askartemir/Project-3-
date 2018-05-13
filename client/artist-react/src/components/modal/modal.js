@@ -1,5 +1,6 @@
 import React from "react"
 import Form from "../form/form.js"
+import { Button, Card, Row, Col } from 'react-materialize';
 
 const Modal = props => (
 <div id="modal1" class="modal">
