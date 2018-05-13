@@ -1,9 +1,15 @@
 //here are dependencies
 var express = require("express");
 
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var expressValidator = require("express-validator");
+var session = require("express-session");
+var MySQLStore = require("express-mysql-session");
 var mysql = require("mysql");
 var AWS = require("aws-sdk");
 var s3 = new AWS.S3();
+var fs = require("fs");
 
 var bodyParser = require("body-parser");
 //dependencies for passport authentication  ... passport is middleware that says whether a user is cool or not--->
