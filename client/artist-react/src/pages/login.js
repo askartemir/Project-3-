@@ -1,7 +1,8 @@
 import React from "react";
-import Modal from "../components/modal/modal";
+// import Modal from "../components/modal/modal";
 import "./login.css"
-import { Button, Card, Col } from 'react-materialize';
+import { Button, Card, Col, Modal } from 'react-materialize';
+import Form from "../components/form/form.js"
 
 export default class Login extends React.Component {
 	render () {
@@ -27,8 +28,11 @@ export default class Login extends React.Component {
 				</div>
 			</div>
 
-			<Modal />
-			<Modal />
+			<Modal
+			  header='Modal Header'
+			  trigger={<Button>MODAL</Button>}>
+			  <Form />
+			</Modal>
 		</div>
 		);
 	}
