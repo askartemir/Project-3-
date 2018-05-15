@@ -22,7 +22,6 @@ var bcrypt = require("bcrypt");
 //here we set up the express app
 var app = express();
 var PORT = process.env.PORT || 8080;
-
 //require our models for synching
 
 var db = require("./models");
@@ -37,8 +36,6 @@ AWS.config.update(
     accessKeyId: bucketKey,
     secretAccessKey: secretKey,
 });
-
-var db = require("./models");
 
 
 
@@ -60,11 +57,11 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-db.sequelize.sync({force:true}).then(function(){
- 	app.listen(PORT, function(){
-		console.log("App is listening on PORT: " + PORT);
- 	});
-});
+// db.sequelize.sync({force:true}).then(function(){
+//  	app.listen(PORT, function(){
+// 		console.log("App is listening on PORT: " + PORT);
+//  	});
+// });
 
 s3.createBucket({Bucket: bucketName}, function(err, data)
 {
@@ -94,8 +91,8 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
 
 
 //here are the Routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+//require("./routes/html-routes.js")(app);
+//require("./routes/api-routes.js")(app);
 
 
 //sync our sequelize models and set up the server to begin listening (start express app)
