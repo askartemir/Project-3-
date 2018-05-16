@@ -26,16 +26,7 @@ var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
 
-//sets up bucket name and key
-var bucketName = "project3artbucket";
-var bucketKey = "AKIAIG5RSPGSHGU6Y3SA";
-var secretKey = "9GMtEtqgH+ifUw2jmDiVU7/WSQobdcioAYMsAykYt";
 
-AWS.config.update(
-{
-    accessKeyId: bucketKey,
-    secretAccessKey: secretKey,
-});
 
 
 
