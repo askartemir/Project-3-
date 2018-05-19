@@ -30,6 +30,7 @@ var db = require("./models");
 
 
 
+
 //here we set up the express app to handle data parsing
 app.use(bodyParser.urlencoded({extended:true}));
 //here we set up app parsing JSON
@@ -48,14 +49,9 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-// db.sequelize.sync({force:true}).then(function(){
-//  	app.listen(PORT, function(){
-// 		console.log("App is listening on PORT: " + PORT);
-//  	});
-// });
+var bucketparams = {Bucket : "artistic-croissants", Body : ""};
 
-s3.createBucket({Bucket: bucketName}, function(err, data)
-{
+s3.upload(bucketparams, function(err, data) {
     if(err)
     {
         console.log(err);
@@ -63,20 +59,7 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
 
     else
     {
-        params = {Bucket: bucketName, Key: bucketKey, Body: "Hello!"};
-
-        s3.putObjects(params, function(err, data)
-        {
-            if(err)
-            {
-                console.log(err);
-            }
-
-            else
-            {
-                console.log("Succesfully uploaded data to project3artbucket");
-            }
-        });
+        console.log("Succesfully uploaded data to project3artbucket");
     }
 });
 
@@ -88,7 +71,7 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-db.sequelize.sync({force:true}).then(function(){
+db.sequelize.sync({force:false}).then(function(){
 	app.listen(PORT, function(){
 		console.log("App is listening on PORT: " + PORT);
 	});
