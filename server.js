@@ -26,12 +26,7 @@ var PORT = process.env.PORT || 8080;
 
 var db = require("./models");
 
-//sets up bucket name and key
-var bucketName = "artistic-croissants";
-//var bucketKey = "AKIAJFNNRDEYKZNPXWAA";
-//var secretKey = "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";
 
-AWS.config.update({accessKeyId: 'AKIAJFNNRDEYKZNPXWAA', secretAccessKey: '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'});
 
 
 
