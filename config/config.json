@@ -4,7 +4,9 @@
     "password": "root",
     "database": "project3DB",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "AWS_ACCESS_KEY_ID": "AKIAJ3UKGCGHFNO3CTQQ",
+    "AWS_SECRET_ACCESS_KEY": "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"
   },
   "test": {
     "username": "root",

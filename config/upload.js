@@ -1,27 +1,23 @@
-// Load the AWS SDK for Node.js
-var AWS = require('aws-sdk');
-// Set the region 
-AWS.config.update({region: 'us-east-2'});
+var AWS = require('aws-sdk'),
+  fs = require('fs');
+var config = require('/config.json');
+    
+AWS.config.update({ accessKeyId: AWS_ACCESS_KEY_ID, secretAccessKey: AWS_SECRET_ACCESS_KEY});
 
-// call S3 to retrieve upload file to specified bucket
-var uploadParams = {Bucket: process.argv[2], Key: 'aws_access_key_id'};
-var file = process.argv[3];
+fs.readFile('del.txt', function (err, data) {
+  if (err) { throw err; }
 
-var fs = require('fs');
-var fileStream = fs.createReadStream(file);
-fileStream.on('error', function(err) {
-  console.log('File Error', err);
-});
-uploadParams.Body = fileStream;
+  var base64data = new Buffer(data, 'binary');
 
-var path = require('path');
-uploadParams.Key = path.basename(file);
+  var s3 = new AWS.S3();
+  s3.client.putObject({
+    Bucket: '',
+    Key: 'AWS_ACCESS_KEY_ID',
+    Body: base64data,
+    ACL: ''
+  },function (resp) {
+    console.log(arguments);
+    console.log('Successfully uploaded package.');
+  });
 
-// call S3 to retrieve upload file to specified bucket
-s3.upload (uploadParams, function (err, data) {
-  if (err) {
-    console.log("Error", err);
-  } if (data) {
-    console.log("Upload Success", data.Location);
-  }
 });
