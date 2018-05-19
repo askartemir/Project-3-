@@ -1,6 +1,8 @@
 //here are dependencies
 var express = require("express");
 
+require('dotenv').config({path: "./config/.env"});
+
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var expressValidator = require("express-validator");
@@ -10,6 +12,9 @@ var mysql = require("mysql");
 var AWS = require("aws-sdk");
 var s3 = new AWS.S3();
 var fs = require("fs");
+
+
+
 
 var bodyParser = require("body-parser");
 //dependencies for passport authentication  ... passport is middleware that says whether a user is cool or not--->
@@ -27,7 +32,7 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 
-
+console.log("we did it!" + process.env.AWS_ACCESS_KEY_ID); // baconpancakes
 
 
 
@@ -49,7 +54,9 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-var bucketparams = {Bucket : "artistic-croissants", Body : ""};
+
+
+var bucketparams = {Key: process.env.AWS_ACCESS_KEY_ID, Bucket: "artistic-croissants", Body: ""};
 
 s3.upload(bucketparams, function(err, data) {
     if(err)
@@ -70,6 +77,8 @@ s3.upload(bucketparams, function(err, data) {
 
 
 //sync our sequelize models and set up the server to begin listening (start express app)
+
+
 
 db.sequelize.sync({force:false}).then(function(){
 	app.listen(PORT, function(){
