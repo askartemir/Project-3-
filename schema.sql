@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS project3DB;
+
 
 CREATE DATABASE project3DB;
 

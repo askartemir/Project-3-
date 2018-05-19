@@ -27,15 +27,12 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 //sets up bucket name and key
-var bucketName = "project3artbucket";
-var bucketKey = "AKIAIG5RSPGSHGU6Y3SA";
-var secretKey = "9GMtEtqgH+ifUw2jmDiVU7/WSQobdcioAYMsAykYt";
+var bucketName = "artistic-croissants";
+//var bucketKey = "AKIAJFNNRDEYKZNPXWAA";
+//var secretKey = "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";
 
-AWS.config.update(
-{
-    accessKeyId: bucketKey,
-    secretAccessKey: secretKey,
-});
+AWS.config.update({accessKeyId: 'AKIAJFNNRDEYKZNPXWAA', secretAccessKey: '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'});
+
 
 
 
@@ -57,14 +54,9 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-// db.sequelize.sync({force:true}).then(function(){
-//  	app.listen(PORT, function(){
-// 		console.log("App is listening on PORT: " + PORT);
-//  	});
-// });
+var bucketparams = {Bucket : "artistic-croissants", Body : ""};
 
-s3.createBucket({Bucket: bucketName}, function(err, data)
-{
+s3.upload(bucketparams, function(err, data) {
     if(err)
     {
         console.log(err);
@@ -72,20 +64,7 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
 
     else
     {
-        params = {Bucket: bucketName, Key: bucketKey, Body: "Hello!"};
-
-        s3.putObjects(params, function(err, data)
-        {
-            if(err)
-            {
-                console.log(err);
-            }
-
-            else
-            {
-                console.log("Succesfully uploaded data to project3artbucket");
-            }
-        });
+        console.log("Succesfully uploaded data to project3artbucket");
     }
 });
 
@@ -97,7 +76,7 @@ s3.createBucket({Bucket: bucketName}, function(err, data)
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-db.sequelize.sync({force:true}).then(function(){
+db.sequelize.sync({force:false}).then(function(){
 	app.listen(PORT, function(){
 		console.log("App is listening on PORT: " + PORT);
 	});
