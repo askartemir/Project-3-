@@ -7,8 +7,6 @@ const Modal = props => (
 
 	<div className="modal-content">
 
-	    <Form />
-
 	    <div class="modal-footer">     
 		    <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
 			<a class="waves-effect waves-light btn">Go</a>
