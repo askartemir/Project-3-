@@ -3,9 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       routeName: DataTypes.STRING,
       name: DataTypes.STRING,
       email: DataTypes.STRING,
-     // allowNull: false,
       favorites: DataTypes.STRING
-     // allowNull: true
     }, {
       timestamps: true
     });

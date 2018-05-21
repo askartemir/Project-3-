@@ -1,17 +1,15 @@
 import React from "react";
 import { Router } from "react-dom-router";
 import Login from "../pages/login";
-s
-const LoginRoute = () => (
-	  <Router>
-    <div>
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-      <hr />
 
-      <Route exact path="/" component={Login} />
-      <Route path="/home" component={About} />
+// ??????
+
+// home route will be triggered after a click/sign in/stuff  
+
+const LoginRoute = () => (
+	<Router>
+    <div>
+      <Route path="/home" component = {Home} />
     </div>
   </Router>
 );
