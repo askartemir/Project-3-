@@ -54,7 +54,7 @@ app.use(express.static("public"));
 
 //sync our sequelize models and set up the server to begin listening (start express app)
 
-
+// test
 
 var bucketparams = {Key: process.env.AWS_ACCESS_KEY_ID, Bucket: "artistic-croissants", Body: ""};
 
