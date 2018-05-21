@@ -7,6 +7,6 @@ const HomeRoute = () => (
       <Route exact path="/home" component={Home} />
     </div>
 );
-
 export default HomeRoute;
+
 
