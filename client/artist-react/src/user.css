@@ -1,0 +1,70 @@
+a
+{
+    color: black;
+}
+
+.not-quite-card
+{
+    border-style: solid;
+    border-width: 1x;
+    border-color: black;
+    width: 150px;
+    height: 200px;
+}
+
+.not-quite-card-image
+{
+    width: 144px;
+    height: 120px;
+}
+
+#headerRow
+{
+    width: 80%;
+}
+
+#logo
+{
+    float: left;
+}
+
+#mainArea
+{
+    width: 800px;
+    height: 500px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    z-index: 1;
+}
+
+.user-tab
+{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    width: 700px;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: 20px;
+    /* text-justify: auto; */
+    z-index: 2;
+}
+
+.user-pic
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 150px;
+    height: 100px;
+    z-index: 3;
+}
+
+.user-info
+{
+    margin-left: 20px;
+    margin-top: 50px;
+}

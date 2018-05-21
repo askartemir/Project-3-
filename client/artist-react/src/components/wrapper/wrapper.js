@@ -1,8 +1,7 @@
 import React from "react";
-import { Card } from "react-materialize";
-import Profile from "./profile.js";
-import "./user.css";
-import Image from "./image.js";
+import { Card, CardTitle } from "react-materialize";
+import Profile from "../profile/profile.js";
+import Image from "../image/image.js";
 
 const Wrapper = props => (
 	<Card className='small'
