@@ -12,39 +12,42 @@ export default class Login extends React.Component {
 				<div className="center-align col s12 m7">
 				  <h3 className="header">Welcome</h3>
 				    <div className="card horizontal">
-				      <div className="card-image">
-				      </div>
 					
 				      <div className="card-stacked">
 				        <div className="card-content">
 				          <p>Are you an artist, or a venue looking for an artist?</p>
 				        </div>
 
+		<div className = "button-container">
 						<div className="card-action center-align">
+							<div className = "center-align">
 					<Modal
-					  header="Sign Up"
-					  trigger={<Button>MODAL</Button>}>
+					  trigger={<Button>Artist</Button>}>
 					  <Form />
 					</Modal>
+					</div>
 
+					<div className = "center-align">
 					<Modal
-					  header="Sign Up"
-					  trigger={<Button>MODAL</Button>}>
+					  trigger={<Button>Venue</Button>}>
 					  <Form />
 					</Modal>
-
+					</div>
 				 		</div>
 				 	  </div>
 				 	</div>
 				</div>
 			</div>
+		</div>
 
-
-			<Modal
-			  header="Sign In"
-			  trigger={<Button>MODAL</Button>}>
-			  <Form />
-			</Modal>
+			<div className = "already-in">
+				<Modal
+					header="Sign In"
+					trigger={<Button className = "already-in">Already in?</Button>}>
+					
+					<Form />
+				</Modal>
+			</div>
 		</div>
 		);
 	}
