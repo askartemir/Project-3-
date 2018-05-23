@@ -12,6 +12,7 @@ var mysql = require("mysql");
 var AWS = require("aws-sdk");
 var s3 = new AWS.S3();
 var fs = require("fs");
+var routes = require("./routes");
 
 
 
@@ -70,6 +71,7 @@ s3.upload(bucketparams, function(err, data) {
     }
 });
 
+app.use(routes);
 
 //here are the Routes
 //require("./routes/html-routes.js")(app);
@@ -86,3 +88,4 @@ db.sequelize.sync({force:false}).then(function(){
 	});
 
 });
+
