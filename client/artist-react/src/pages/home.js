@@ -1,8 +1,11 @@
 // based off of user.html
 import React from "react";
+import { Col, Card } from "react-materialize";
 import "./home.css";
-import { Card, CardTitle, Image } from 'react-materialize';
-import Form from "../components/profile/profile.js";
+// import Wrapper from "../components/wrapper/wrapper";
+import TextArea from "../components/textarea/textarea";
+import DropDown from "../components/profile/dropdown";
+// import Paginate from "../components/pagination/pagination";
 
 export default class Home extends React.Component {
 	render () {
@@ -15,6 +18,11 @@ export default class Home extends React.Component {
 				  I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
 				</Card>
 			</div>
+
+			<DropDown />
+			{/* <Wrapper /> */}
+			<TextArea />
+			{/* <Paginate /> */}
 		</div>
 		);
 	}

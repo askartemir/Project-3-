@@ -37,8 +37,45 @@ ul.collapsible.container {
 
 a.waves-effect.waves-light.btn {
 	margin-top: 10px;
-}
+} */
+
 
 button.waves-effect.waves-light.btn.modal-trigger.artist-btn.second {
 	margin-left: 25px;
 }
+
+button.btn {
+	margin-left: 300px;
+}
+
+div.button.container {
+	margin-left: 400px; 
+}
+
+div.center-align {
+	margin-right: 172px;
+}
+
+ div.card-content {
+	margin-right: 9px;
+}
+
+.header {
+	font-family: 'Roboto Slab', serif;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+div.already-in {
+	margin-right: 300px;
+}
+
+button.btn.already-in {
+	margin-left: 575px;
+}
+
+/* 396px */
+/* 396px */

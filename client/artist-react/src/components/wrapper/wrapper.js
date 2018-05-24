@@ -2,13 +2,16 @@ import React from "react";
 import { Card, CardTitle } from "react-materialize";
 import Profile from "../profile/profile.js";
 import Image from "../image/image.js";
+import "./wrapper.css"
 
 const Wrapper = props => (
-	<Card className='small'
-  header={<CardTitle image='img/sample-1.jpg'>Card Title</CardTitle>}
-  actions={[<a href='#'>This is a Link</a>]}>
-  I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
-</Card>
+  <div className = "container" id = "profile-container">
+    <Card className='small'
+    header={<CardTitle>Image</CardTitle>}
+    actions={[<a href='#'>Hello Artist / Venue</a>]}>
+    This will also be populated.
+    </Card>
+  </div>
 	)
 
 
