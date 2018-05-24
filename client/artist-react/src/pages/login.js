@@ -60,8 +60,8 @@ export default class Login extends React.Component {
 
 					<div className = "center-align">
 					<Modal
-					  trigger={<Button>Venue</Button>}>
-					  <Form value={this.state} onChange={this.handleOnChangeSignUp}  />
+					  trigger={<Button>Venue</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
 					</div>
 				 		</div>
@@ -74,9 +74,8 @@ export default class Login extends React.Component {
 			<div className = "already-in">
 				<Modal
 					header="Sign In"
-					trigger={<Button className = "already-in">Already in?</Button>}>
-					
-					<Form value={this.state} onChange={this.handleOnChangeSignUp} />
+					trigger={<Button>Already In?</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					<Form value={this.state} onChange={this.handleOnChangeSignUp}/>
 				</Modal>
 			</div>
 		</div>

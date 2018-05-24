@@ -3,7 +3,8 @@ import { Card, CardTitle, Col } from "react-materialize";
 import Image from "../image/image.js";
 
 const Profile = props => (
-    <div>
+
+    <div className = "container">
         <Image />
 
         <Col m={6} s={12}>
