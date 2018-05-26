@@ -14,4 +14,4 @@ const CreateProfile = props =>(
     </Form>
 );
 
-export default createProfile;
+export default CreateProfile;
