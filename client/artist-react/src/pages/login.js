@@ -1,5 +1,4 @@
 import React from "react";
-// import Modal from "../components/modal/modal";
 import "./login.css";
 import { Redirect } from "react-router-dom";
 import { Button, Card, Col, Modal, Icon } from 'react-materialize';
