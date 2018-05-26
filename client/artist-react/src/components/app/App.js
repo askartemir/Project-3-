@@ -6,7 +6,7 @@ import './App.css';
 import Login from "../../pages/login";
 import Home from "../../pages/home";
 import ProfilePage from "../../pages/profilepage";
-import CreateProfilePage from "../../pages/createprofilepage";
+// import CreateProfilePage from "../../pages/createprofilepage";
 import './App.css';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route path ="/home" component={Home} />
           <Route exact path ="/profile" component = {ProfilePage} />
-          <Route exact path ="/profilepage" component = {CreateProfilePage} />
+          {/* <Route exact path ="/profilepage" component = {CreateProfilePage} /> */}
 	      </div>
       </Router>
     );
