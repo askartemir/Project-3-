@@ -1,6 +1,6 @@
 import React from "react";
-import "./createProfile.css";
-import {Button, Input, File, Form} from "react-materialize";
+// import "./createProfile.css";
+import { Button, Input, File, Form, Row } from "react-materialize";
 
 const createProfile = props =>(
     <Form id = "newProfile" onSubmit={this.submit}>

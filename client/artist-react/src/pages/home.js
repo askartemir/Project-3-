@@ -1,6 +1,6 @@
 // based off of user.html
 import React from "react";
-import { Col, Card } from "react-materialize";
+import { Col, Card, CardTitle } from "react-materialize";
 import "./home.css";
 // import Wrapper from "../components/wrapper/wrapper";
 import TextArea from "../components/textarea/textarea";
