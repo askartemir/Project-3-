@@ -16,4 +16,3 @@ const DropDown = props => (
 )
 
 export default DropDown;
-
