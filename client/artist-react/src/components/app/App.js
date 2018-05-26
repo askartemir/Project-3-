@@ -7,6 +7,8 @@ import Home from "../../pages/home";
 
 import ProfilePage from "../../pages/profilepage";
 
+import CreateProfilePage from "../../pages/createProfile";
+
 import './App.css';
 
 
@@ -16,14 +18,10 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Login} />
-
-        </div>
-        
           <Route path ="/home" component={Home} />
           <Route exact path ="/profile" component = {ProfilePage} />
-          <Route exact path ="/profilepage" component = {CreateProfilePage} />
+          {/* <Route exact path ="/profilepage" component = {CreateProfilePage} /> */}
 	      </div>
-
       </Router>
     );
   }

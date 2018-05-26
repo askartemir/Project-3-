@@ -1,13 +1,14 @@
 import React from "react";
 import { Modal, Button } from "react-materialize";
 import TextArea from "../textarea/textarea";
+import "../../pages/home.css";
 
 const ProfileModal = props => (
-    <Modal
-  header='Modal Header'
+    <Modal className = "expand-modal"
+  header="Data"
   fixedFooter
-  trigger={<Button>MODAL WITH FIXED FOOTER</Button>}>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  trigger={<Button>Expand</Button>}>
+  Profile data
 </Modal>
 )
 

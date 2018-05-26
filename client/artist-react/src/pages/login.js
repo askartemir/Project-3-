@@ -52,6 +52,7 @@ export default class Login extends React.Component {
 						<div className="card-action center-align">
 							<div className = "center-align">
 					<Modal
+						header="Sign Up"
 					  trigger={<Button>Artist</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
@@ -59,6 +60,7 @@ export default class Login extends React.Component {
 
 					<div className = "center-align">
 					<Modal
+						header="Sign Up"
 					  trigger={<Button>Venue</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
@@ -73,7 +75,7 @@ export default class Login extends React.Component {
 			<div className = "already-in">
 				<Modal
 					header="Sign In"
-					trigger={<Button>Already In?</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					trigger={<Button className="already-in">Already In?</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					<Form value={this.state} onChange={this.handleOnChangeSignUp}/>
 				</Modal>
 			</div>

@@ -8,10 +8,9 @@ const TextArea = props => {
 	data = data.map((data, index) => {
 		return (
 			<div className = "container">
-				<Card key={data.toString()} className="card-panel" textClassName='black-text' title='Venue/artist name' actions={[<a href='#'>Expand</a>]}>
+				<Card key={data.toString()} className="card-panel" textClassName='black-text' title='Venue/artist name' actions={<ProfileModal />}>
 				Will be populated with data from artists or venues
 				</Card>
-				<ProfileModal />
 			</div>
 		);
 	});
