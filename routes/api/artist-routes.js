@@ -10,6 +10,8 @@ var LocalStrategy = require("passport-local").Strategy;
 
 var Sequelize= require("sequelize");
 
+// THIS HAS TO BE CALLED IN SERVER.JS SOMEHOW, import into index.js like other apis
+
 //here we are going to hash the user password
 var generateHash = function(password) {
 	return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
@@ -46,6 +48,8 @@ router.post("/register", function(req, res) {
 	var username = req.body.username;
 	var email = req.body.email;
 	var password = req.body.password;
+	var userType = req.body.userType; // 'artist' OR 'venue'
+	// create a new user and add user type so can then call all the users from first page and populate page with artists and venues
 
 	console.log("Your registration username is: " + username);
 	console.log("Your registration password is: " + password);
@@ -68,6 +72,7 @@ router.post("/register", function(req, res) {
 		});
 	}
 	else{
+		//data should match model sometime
 		var data = {
 			username: username,
 			email: email,

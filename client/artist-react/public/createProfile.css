@@ -1,3 +1,20 @@
+body
+{
+    background-image: url("https://f4.bcbits.com/img/a0770128082_10.jpg");
+    background-position: right top;
+    background-size: 100%;
+}
+
+body, background-image
+{
+
+}
+
+.container
+{
+    background-color: black;
+}
+
 #main-area
 {
     background-color: crimson;
