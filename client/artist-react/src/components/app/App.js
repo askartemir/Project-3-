@@ -22,7 +22,6 @@ class App extends Component {
           <Route exact path ="/profile" component = {ProfilePage} />
           {/* <Route exact path ="/profilepage" component = {CreateProfilePage} /> */}
 	      </div>
-
       </Router>
     );
   }
