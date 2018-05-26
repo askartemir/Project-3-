@@ -7,6 +7,8 @@ import Home from "../../pages/home";
 
 import ProfilePage from "../../pages/profilepage";
 
+import CreateProfilePage from "../../pages/createprofilepage";
+
 import './App.css';
 
 
