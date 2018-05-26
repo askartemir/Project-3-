@@ -2,7 +2,7 @@ import React from "react";
 import "./createProfile.css";
 import {Button, Input, File, Form} from "react-materialize";
 
-const createProfile = props =>(
+const CreateProfile = props =>(
     <Form id = "newProfile" onSubmit={this.submit}>
         <Row>
             <Input s={6} m={6} l={6} label = "First Name" />
