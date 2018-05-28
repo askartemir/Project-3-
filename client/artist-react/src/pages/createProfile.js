@@ -12,16 +12,18 @@ export default class createProfile extends React.Component {
                     <div className = "profile-box">
                     <MediaBox src="http://via.placeholder.com/140x140" width="200"/>
                     </div>
-
-                    <Input placeholder="Placeholder" s={6} label="First Name" />
+                
+                <div className = "content">
+                    <Input s={6} label="First Name" />
                     <Input s={6} label="Last Name" />
+                </div>
                     
-                    <div className = "about-row">
+                    <div className = "about">
                         <Row>
                             <Input type='textarea' className = "text-extended" label = "Tell us a bit about yourself."/>
                         </Row>
                     </div>
-                        
+
                     <Button className = "linkbtn" waves='light' node='a' href='/home'> I'm done </Button>
                 </Row>
                 </CardPanel>
