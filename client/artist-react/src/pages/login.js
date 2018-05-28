@@ -24,7 +24,7 @@ export default class Login extends React.Component {
 		let name = target.name;
 		let value = target.value
 
-		this.setState({ isModalOpen: true, [name]: value });
+		this.setState({ [name]: value });
 	}
 
 	onClickClose() {
@@ -53,7 +53,7 @@ export default class Login extends React.Component {
 							<div className = "center-align">
 					<Modal
 						header="Sign Up"
-					  trigger={<Button>Artist</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					  trigger={<Button>Artist</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
 					</div>
@@ -61,7 +61,7 @@ export default class Login extends React.Component {
 					<div className = "center-align">
 					<Modal
 						header="Sign Up"
-					  trigger={<Button>Venue</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					  trigger={<Button>Venue</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
 					</div>
@@ -75,7 +75,7 @@ export default class Login extends React.Component {
 			<div className = "already-in">
 				<Modal
 					header="Sign In"
-					trigger={<Button className="already-in">Already In?</Button>} open={this.state.isModalOpen} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					trigger={<Button className="already-in">Already In?</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					<Form value={this.state} onChange={this.handleOnChangeSignUp}/>
 				</Modal>
 			</div>
