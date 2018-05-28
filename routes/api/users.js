@@ -10,20 +10,30 @@ router.route("/")
   }).post(function(req, res) {
       // todo replace hard coded values with req.body.name, etc.
     db.User.create({
-        routeName: 'user-2',
-        name: 'Joe Schmoe',
-        details: 'I am a great arteest, bye my stuff',
-        email: 'joe@demo.com',
-        username: 'bibimbop007',
+        routeName: req.body.routeName,
+        name: req.body.name,
+        details: req.body.details,
+        email: req.body.emails,
+        username: req.body.username,
         password: '****',
-        favorites: 'Venue-example2',
-        userType: 'artist'
-    }).then(function(dbTodo) {
+        favorites: req.body.favorites,
+        userType: req.body.userType
+    }).then(function(dbUser) {
         // We have access to the new todo as an argument inside of the callback function
-        res.json(dbTodo);
+        res.json(dbUser);
     });
-  
+
 });
+
+router.route("/:id")
+.delete(function(req, res) {
+  db.User.destroy({
+    where: {
+      id: req.query.id,
+    }
+  });
+});
+
 
 // Matches with "/api/books/:id"
 //router/

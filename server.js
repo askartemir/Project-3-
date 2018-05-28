@@ -27,7 +27,7 @@ var flash = require('flash');
 var bcrypt = require("bcrypt");
 //here we set up the express app
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 //require our models for synching
 
 var db = require("./models");
