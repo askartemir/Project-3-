@@ -18,9 +18,8 @@ const Modal1 = props => (
 			<a className="waves-effect waves-light btn">Go</a>
 
 	    </div>
-
 	</div>
-
+   </div>
 </div>
 
 )
