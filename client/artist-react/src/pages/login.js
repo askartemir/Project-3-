@@ -47,6 +47,23 @@ export default class Login extends React.Component {
 				        <p>Are you an artist, or a venue looking for an artist?</p>
 				      </div>
 
+		<div className = "button-container">
+						<div className="card-action center-align">
+							<div className = "center-align">
+					<Modal
+						header="Sign Up"
+					  trigger={<Button>Artist</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
+					</Modal>
+					</div>
+
+					<div className = "center-align">
+					<Modal
+						header="Sign Up"
+					  trigger={<Button>Venue</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
+					</Modal>
+      
 							<div className = "button-container">
 								<div className="card-action center-align">
 									<div className = "center-align">
@@ -74,7 +91,8 @@ export default class Login extends React.Component {
 			<div className = "already-in">
 				<Modal
 					header="Sign In"
-					trigger={<Button className="already-in">Already In?</Button>} /*open={this.state.isModalOpen}*/ actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+
+					trigger={<Button className="already-in">Already In?</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					<Form value={this.state} onChange={this.handleOnChangeSignUp}/>
 				</Modal>
 			</div>
