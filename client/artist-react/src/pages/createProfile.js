@@ -32,4 +32,3 @@ export default class createProfile extends React.Component {
 		);
 	}
 }
-export default CreateProfile;
