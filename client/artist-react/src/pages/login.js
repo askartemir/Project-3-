@@ -22,7 +22,7 @@ export default class Login extends React.Component {
 	handleOnChangeSignUp = (event) => {
 		let target = event.target;
 		let name = target.name;
-		let value = target.value
+		let value = target.value;
 
 		this.setState({ [name]: value });
 	}
@@ -41,12 +41,11 @@ export default class Login extends React.Component {
 			<div className ="container">
 				<div className="center-align col s12 m7">
 				  <h3 className="header">Welcome</h3>
-				    <div className="card horizontal">
-					
-				      <div className="card-stacked">
-				        <div className="card-content">
-				          <p>Are you an artist, or a venue looking for an artist?</p>
-				        </div>
+				  <div className="card horizontal">
+				    <div className="card-stacked">
+				      <div className="card-content">
+				        <p>Are you an artist, or a venue looking for an artist?</p>
+				      </div>
 
 		<div className = "button-container">
 						<div className="card-action center-align">
@@ -64,17 +63,35 @@ export default class Login extends React.Component {
 					  trigger={<Button>Venue</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					  <Form value={this.state} onChange={this.handleOnChangeSignUp} />
 					</Modal>
+      
+							<div className = "button-container">
+								<div className="card-action center-align">
+									<div className = "center-align">
+										<Modal
+											header="Sign Up"
+											trigger={<Button>Artist</Button>} /*open={this.state.isModalOpen}*/ actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+											<Form value={this.state} onChange={this.handleOnChangeSignUp} />
+										</Modal>
+									</div>
+
+									<div className = "center-align">
+										<Modal
+											header="Sign Up"
+											trigger={<Button>Venue</Button>} /*open={this.state.isModalOpen}*/ actions={<Button onClick={this.handleSignUp}>Go</Button>}>
+											<Form value={this.state} onChange={this.handleOnChangeSignUp} />
+										</Modal>
+									</div>
+								</div>	
+							</div>
+						</div>
 					</div>
-				 		</div>
-				 	  </div>
-				 	</div>
 				</div>
 			</div>
-		</div>
 
 			<div className = "already-in">
 				<Modal
 					header="Sign In"
+
 					trigger={<Button className="already-in">Already In?</Button>} actions={<Button onClick={this.handleSignUp}>Go</Button>}>
 					<Form value={this.state} onChange={this.handleOnChangeSignUp}/>
 				</Modal>
