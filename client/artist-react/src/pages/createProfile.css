@@ -1,0 +1,19 @@
+#newProfile
+{
+    text-align: center;
+
+}
+
+.form-box {
+    margin-top: 90px;
+}
+
+.profile-box {
+    margin-left: 20px;
+    float: left;
+}
+
+a.waves-effect.waves-light.btn {
+    margin-left: 444px;
+    margin-bottom: -18px;
+}
