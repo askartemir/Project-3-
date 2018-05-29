@@ -24,7 +24,7 @@ export default class Login extends React.Component {
 		let name = target.name;
 		let value = target.value
 
-		this.setState({ isModalOpen: true, [name]: value });
+	
 	}
 
 	onClickClose() {
