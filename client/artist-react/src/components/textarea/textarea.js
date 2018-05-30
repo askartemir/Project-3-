@@ -41,19 +41,18 @@ class TextArea extends React.Component {
 	  } else if (!isLoaded) {
 		return <div>Loading...</div>;
 	  } else {
+			console.log(items);
 		return (
-		  <ul>
+				<div className = "container">
 			{items.map(item => (
-			  <div className = "container">
 				<Card key={item.id} className="card-panel" textClassName='black-text' title={item.name} actions={<ProfileModal />}>			
 				<ul> {item.email} </ul>
 				<ul> {item.details} </ul>
 				<ul> {item.userType} </ul>
 				<ul> {item.favorites} </ul>
 				</Card>
-			</div>
 			))}
-		  </ul>
+			 </div>
 		);
 	  }
 	}

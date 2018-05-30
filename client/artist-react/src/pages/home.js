@@ -14,13 +14,13 @@ export default class Home extends React.Component {
 	render () {
 		return (
 		<div>
-			<div className = "wrapper">
+			{/* <div className = "wrapper">
 				<Card className='small'
 				  header={<CardTitle image='http://via.placeholder.com/140x140'>Card Title</CardTitle>}
 				  actions={[<a href='#'>This is a Link</a>]}>
 				  I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
 				</Card>
-			</div>
+			</div> */}
 
 			<DropDown />
 			{/* <Wrapper /> */}
