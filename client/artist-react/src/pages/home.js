@@ -5,6 +5,9 @@ import "./home.css";
 // import Wrapper from "../components/wrapper/wrapper";
 import TextArea from "../components/textarea/textarea";
 import DropDown from "../components/profile/dropdown";
+// import Paginate from "../components/pagination/pagination";
+import "./login.js";
+
 import Paginate from "../components/pagination/pagination";
 
 export default class Home extends React.Component {
