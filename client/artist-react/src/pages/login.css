@@ -1,43 +1,40 @@
 body {
-  overflow-x: hidden !important;
-}
-body > * {
-  max-width: 100% !important;
+	background-repeat: repeat;
+	background-image: url("../components/image/background/seigaiha/seigaiha.png");
+    background-attachment: fixed;
+    background-position: 0px 200px;
+    background-size: cover;
 }
 
-.card-title {
+/* .card-title {
 	text-align: center;
-}
+} */
 
-/* unset bs3 setting */
-.modal-open {
- overflow: auto; 
-}
 
-.member-btn {
+/* .member-btn {
 	margin: 0 -30px 0 -99px;
     position:relative;
     left: 49%; 
     margin-top: 12px;
-}
+} */
 
-ul.collapsible.container {
+/* ul.collapsible.container {
 	margin-top: 170px;
 	margin-left: 10px;
-}
-
+} */
+/* 
 .collapsible {
 	width: 300px;
 	text-align: center;
-}
-
-.collapsible-header {
-	padding-left: 97px;
-}
-
-a.waves-effect.waves-light.btn {
-	margin-top: 10px;
 } */
+
+/* .collapsible-header {
+	padding-left: 97px;
+} */
+
+/* a.waves-effect.waves-light.btn {
+	margin-top: 10px;
+} */ */
 
 
 button.waves-effect.waves-light.btn.modal-trigger.artist-btn.second {

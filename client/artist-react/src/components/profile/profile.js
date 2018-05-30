@@ -7,8 +7,8 @@ const Profile = props => (
     <div className = "container">
         <Image />
 
-        <Col m={6} s={12}>
-            <Card className='profilebox' textClassName='black-text'  title='Card title' actions={[<a href='#'>This is a link</a>]}>
+        <Col>
+            <Card className='profilebox' textClassName='black-text'  title='Card title'>
                Profile data
             </Card>
         </Col>
