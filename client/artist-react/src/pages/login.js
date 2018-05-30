@@ -23,7 +23,7 @@ export default class Login extends React.Component {
 		let target = event.target;
 		let name = target.name;
 		let value = target.value;
-
+    
 		this.setState({ [name]: value });
 	}
 

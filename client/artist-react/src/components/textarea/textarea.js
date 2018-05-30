@@ -44,8 +44,11 @@ class TextArea extends React.Component {
 		  <ul>
 			{items.map(item => (
 			  <div className = "container">
-				<Card key={item.id} className="card-panel" textClassName='black-text' title={item.name} actions={<ProfileModal />}>
-				Will be populated with data from artists or venues
+				<Card key={item.id} className="card-panel" textClassName='black-text' title={item.name} actions={<ProfileModal />}>			
+				<ul> {item.email} </ul>
+				<ul> {item.details} </ul>
+				<ul> {item.userType} </ul>
+				<ul> {item.favorites} </ul>
 				</Card>
 			</div>
 			))}

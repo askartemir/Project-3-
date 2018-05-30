@@ -15,13 +15,15 @@ export default class Home extends React.Component {
 		return (
 		<div>
 			<div className = "wrapper">
-				<Card className='small'
-				  header={<CardTitle image='http://via.placeholder.com/140x140'>Card Title</CardTitle>}
-				  actions={[<a href='#'>This is a Link</a>]}>
-				  I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+				<Card className='small opener'
+				  title={"Welcome to Artist Croissant"}
+				  actions={[<a href='#'></a>]}>
+				  "Hello Artist! Welcome to Artist Croissant, the place where you can quickly find venues 
+				  and businesses looking for local art! The list below are the venues and their contact information. 
+				  Please feel free to reachout to any of them to learn more about their art needs"
 				</Card>
 			</div>
-
+			
 			<DropDown />
 			{/* <Wrapper /> */}
 			<TextArea />
