@@ -1,4 +1,3 @@
-//here are dependencies
 var express = require("express");
 
 require('dotenv').config({path: "./config/.env"});
@@ -88,4 +87,3 @@ db.sequelize.sync({force:false}).then(function(){
 	});
 
 });
-

@@ -16,6 +16,7 @@ export default class createProfile extends React.Component {
                 <div className = "content">
                     <Input s={6} label="First Name" />
                     <Input s={6} label="Last Name" />
+                    <Input s={6} label="Contact Info" />
                 </div>
                     
                     <div className = "about">
@@ -23,6 +24,7 @@ export default class createProfile extends React.Component {
                             <Input type='textarea' className = "text-extended" label = "Tell us a bit about yourself."/>
                         </Row>
                     </div>
+
 
                     <Button className = "linkbtn" waves='light' node='a' href='/home'> I'm done </Button>
                 </Row>
